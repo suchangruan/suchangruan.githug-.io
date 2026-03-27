@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(45deg);
+            margin: 100px auto;
+        }
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+        }
+        /* 前面 */
+        .front {
+            background: linear-gradient(45deg, #ff0000, #ffff00);
+            transform: translateZ(100px);
+        }
+        /* 后面 */
+        .back {
+            background: linear-gradient(45deg, #00ff00, #00ffff);
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+        /* 右面 */
+        .right {
+            background: linear-gradient(45deg, #0000ff, #ff00ff);
+            transform: translateX(100px) rotateY(90deg);
+        }
+        /* 左面 */
+        .left {
+            background: linear-gradient(45deg, #ff8800, #88ff00);
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+        /* 上面 */
+        .top {
+            background: linear-gradient(45deg, #0088ff, #8800ff);
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        /* 下面 */
+        .bottom {
+            background: linear-gradient(45deg, #ff0088, #00ff88);
+            transform: translateY(100px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+</body>
+</html>
