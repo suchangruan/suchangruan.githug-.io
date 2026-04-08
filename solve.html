@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solve Quadratic Equation</title>
+</head>
+<body>
+    <script>
+        // (1) 三次调用prompt获取a、b、c
+        let aStr = prompt("Please enter coefficient a (a > 0):", "");
+        let bStr = prompt("Please enter coefficient b:", "");
+        let cStr = prompt("Please enter coefficient c:", "");
+
+        // (2) 用parseFloat转换为数字
+        let a = parseFloat(aStr);
+        let b = parseFloat(bStr);
+        let c = parseFloat(cStr);
+
+        // (3) 计算判别式delta
+        let delta = b * b - 4 * a * c;
+
+        // (4) 计算两个根（题目假设delta >= 0, a > 0）
+        let sqrtDelta = Math.sqrt(delta);
+        let x1 = (-b + sqrtDelta) / (2 * a);
+        let x2 = (-b - sqrtDelta) / (2 * a);
+
+        // (5) 用alert展示结果
+        alert(`The roots of the quadratic equation are: x1 = ${x1}, x2 = ${x2}`);
+
+        // (6) 用console.log展示结果
+        console.log(`Coefficients: a = ${a}, b = ${b}, c = ${c}`);
+        console.log(`Delta = ${delta}`);
+        console.log(`x1 = ${x1}, x2 = ${x2}`);
+    </script>
+</body>
